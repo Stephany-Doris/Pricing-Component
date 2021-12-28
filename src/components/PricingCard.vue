@@ -1,6 +1,7 @@
 <template>
   <div class="card">
     <h2>{{ title }}</h2>
+    <span>{{ price }}</span>
     <slot></slot>
     <Button text="Subscribe" />
   </div>
@@ -14,6 +15,8 @@ export default defineComponent({
   name: "PricingCard",
   props: {
     title: String,
+    price: String,
+    object: Object,
   },
   components: { Button },
   setup() {},
@@ -22,20 +25,22 @@ export default defineComponent({
 
 <style scoped>
 .card {
+  max-width: -webkit-fill-available;
   height: 450px;
   width: -webkit-fill-available;
   background-color: white;
-  color: #050710;
+  color: #141c3e;
   border-radius: 8px;
-  margin: auto;
+  min-width: 280px;
+  max-width: 350px;
   padding: 8px;
   position: relative;
 }
 
 .card:hover {
-  height: 500px;
-  /* flex-grow: 2; */
+  transform: scale(1.1);
+  transition: transform 1s;
   color: white;
-  background-color: #050710;
+  background-color: #141c3e;
 }
 </style>
