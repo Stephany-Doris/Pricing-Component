@@ -20,7 +20,7 @@ export default defineComponent({
 .button {
   width: 70%;
   color: white;
-  background-color: #050710;
+  background-color: #141C3E;
   border: 2px solid white;
   height: 40px;
   border-radius: 18px;
@@ -31,8 +31,9 @@ export default defineComponent({
 }
 
 .card:hover .button {
-  color: #050710;
+  color: #141C3E;
   background-color: white;
-  border: 2px solid #050710;
+  border: 2px solid #141C3E;
+  cursor: pointer;
 }
 </style>
